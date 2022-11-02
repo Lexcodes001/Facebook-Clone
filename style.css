@@ -59,7 +59,7 @@ body{
     display: flex;
     flex-direction: column;
     margin: 0;
-    width: 25rem;
+    width: 20rem;
     max-width: 30rem;
 }
 
