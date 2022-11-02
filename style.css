@@ -11,14 +11,15 @@
 :root{
     --white: #fff;
     --black: #000;
-    --grey: #f0f2f5;
+    --grey: #f5f6f7;
     --dark-grey: #868686;
     --light-blue1: #e7f3ff;
     --light-blue2: #216fdb;
-    --blue: #1877f2;
+    --light-blue3: rgba(24, 119, 242, .7);
+    --blue: rgba(24, 119, 242, 1);
     --dark-blue: #576b95;
-    --light-green: #86df81;
-    --green: #00a400;
+    --light-green: rgba(0, 164, 0, .7);
+    --green: rgba(0, 164, 0, 1);
 }
 
 *{
@@ -32,7 +33,7 @@ button{
     outline: none;
 }
 
-button, i{
+button, a, i{
     cursor: pointer;
 }
 
@@ -58,7 +59,8 @@ body{
     display: flex;
     flex-direction: column;
     margin: 0;
-    width: 100%;
+    width: 25rem;
+    max-width: 30rem;
 }
 
 .body-content .header{
@@ -143,7 +145,7 @@ form i{
 }
 
 .log-in:active{
-    background-color: rgba(0, 0, 255, .4);
+    background-color: var(--light-blue3);
 }
 
 .fgt-psw, .or-box{
@@ -187,10 +189,11 @@ form i{
     height: 2.3rem;
     font-size: 1.15rem;
     font-weight: 400;
+    border-radius: .3rem;
 }
 
 .crt-acct:active{
-    color: var(--dark-blue);
+    color: var(--white);
     background-color: var(--light-green);
 }
 
@@ -277,19 +280,22 @@ form i{
     }
     
     .body-content{
+        width: 100%;
+        max-width: 100%;
         flex-direction: row;
         justify-content: space-around;
-        align-items: flex-start;
+        align-items: center;
         gap: 3rem;
         background-color: var(--grey);
-        padding: 8rem 15rem;
+        padding: 8rem 8rem;
     }
     
     .body-content .header{
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
-        padding-top: 3rem;
+        padding-bottom: 7rem;
+        min-width: 16rem;
     }
     
     .body-content .header h1{
@@ -304,7 +310,7 @@ form i{
         margin-top: 0;
         display: block;
         color: var(--black);
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     
     .body-content .form{
@@ -365,12 +371,12 @@ form i{
         font-weight: 700;
         margin: .4rem 0 0;
         color: var(--white);
-        background-color: var(--blue);
+        background-color: var(--light-blue3);
         text-shadow: none;
     }
     
     .log-in:active{
-        background-color: rgba(24, 119, 242, .6)
+        background-color: var(--blue);
     }
     
     .fgt-psw p{
@@ -393,7 +399,7 @@ form i{
     
     .crt-acct{
         color: var(--white);
-        background-color: var(--green);
+        background-color: var(--light-green);
         padding: .4rem 1.1rem;
         margin: .1rem auto .4rem;
         height: 3rem;
@@ -405,7 +411,7 @@ form i{
     
     .crt-acct:active{
         color: var(--white);
-        background-color: rgba(0, 164, 0, .6);
+        background-color: var(--green);
     }
     
     .crt-page{
@@ -415,11 +421,17 @@ form i{
         font-weight: 100;
     }
     
-    .crt-page span{
+    .crt-page span a{
+        color: var(--black);
         font-weight: 600;
+        text-decoration: none;
     }
     
-    .crt-page span:active{
+    .crt-page span a:hover{
+        text-decoration: underline;
+    }
+
+    .crt-page span a:active{
         text-decoration: underline;
     }
 
@@ -653,5 +665,9 @@ form i{
         font-size: .8rem;
         font-weight: 900;
         border-radius: .2rem;
+    }
+
+    .signup-btn button:active{
+        background-color: var(--light-green);
     }
 }

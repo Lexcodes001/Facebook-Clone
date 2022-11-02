@@ -20,7 +20,8 @@ pswIcon.addEventListener('click', ()=>{
 for (var i = 0; i < allInputs.length; i++) {
     allInputs[i].addEventListener('focus', function(){
         if (window.innerWidth > 769) {
-            this.parentElement.style.border = '2px solid var(--blue)';
+            this.parentElement.style.border = '1px solid var(--blue)';
+            this.parentElement.style.outline = '2px solid var(--light-blue1)';
         } else {
             this.parentElement.style.border = '1px solid var(--black)';
         }
@@ -28,6 +29,7 @@ for (var i = 0; i < allInputs.length; i++) {
     
     allInputs[i].addEventListener('blur', function() {
         this.parentElement.style.border = '2px solid var(--grey)';
+        this.parentElement.style.outline = 'none';
     });
 }
 
